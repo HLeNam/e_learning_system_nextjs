@@ -1,5 +1,10 @@
 export { default as IconPlay } from "./icon-play";
 export { default as IconUser } from "./icon-user";
 export { default as IconBolt } from "./icon-bolt";
+export { default as IconHome } from "./icon-home";
+export { default as IconStudy } from "./icon-study";
+export { default as IconUsers } from "./icon-users";
+export { default as IconOrder } from "./icon-order";
+export { default as IconComment } from "./icon-comment";
 export { default as IconChevronLeft } from "./icon-chevron-left";
 export { default as IconChevronRight } from "./icon-chevron-right";

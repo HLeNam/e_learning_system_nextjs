@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
+
 import { inter } from "@/utils/fonts";
 
 import "./globals.css";
-import Sidebar from "@/components/layout/sidebar";
-import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "E Learning System",
