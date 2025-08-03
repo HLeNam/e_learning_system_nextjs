@@ -1,16 +1,15 @@
-import createUser from "@/lib/actions/user.actions";
-import { WebhookEvent } from "@clerk/nextjs/server";
-import { headers } from "next/headers";
-import { NextResponse } from "next/server";
 import { Webhook } from "svix";
+import { NextResponse } from "next/server";
+import { WebhookEvent } from "@clerk/nextjs/server";
+
+import createUser from "@/lib/actions/user.actions";
 
 const webhookSecret: string = process.env.WEBHOOK_SECRET || "";
 
 export async function POST(req: Request) {
-  const header = await headers();
-  const svix_id = header.get("svix-id") ?? "";
-  const svix_timestamp = header.get("svix-timestamp") ?? "";
-  const svix_signature = header.get("svix-signature") ?? "";
+  const svix_id = req.headers.get("svix-id") ?? "";
+  const svix_timestamp = req.headers.get("svix-timestamp") ?? "";
+  const svix_signature = req.headers.get("svix-signature") ?? "";
 
   if (!webhookSecret) {
     console.error(">>> WEBHOOK_SECRET is not set in environment variables");
