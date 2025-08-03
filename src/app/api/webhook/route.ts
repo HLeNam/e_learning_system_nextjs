@@ -11,6 +11,12 @@ export async function POST(req: Request) {
   const svix_timestamp = req.headers.get("svix-timestamp") ?? "";
   const svix_signature = req.headers.get("svix-signature") ?? "";
 
+  console.log(">>> Received webhook request:", {
+    svix_id,
+    svix_timestamp,
+    svix_signature,
+  });
+
   if (!webhookSecret) {
     console.error(">>> WEBHOOK_SECRET is not set in environment variables");
     return new Response("Internal Server Error", { status: 500 });
