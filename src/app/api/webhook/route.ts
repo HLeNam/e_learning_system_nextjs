@@ -11,12 +11,6 @@ export async function POST(req: Request) {
   const svix_timestamp = req.headers.get("svix-timestamp") ?? "";
   const svix_signature = req.headers.get("svix-signature") ?? "";
 
-  console.log(">>> Received webhook request:", {
-    svix_id,
-    svix_timestamp,
-    svix_signature,
-  });
-
   if (!webhookSecret) {
     console.error(">>> WEBHOOK_SECRET is not set in environment variables");
     return new Response("Internal Server Error", { status: 500 });
@@ -27,13 +21,7 @@ export async function POST(req: Request) {
     return new Response("Bad Request", { status: 400 });
   }
 
-  // const payload = await req.json();
-
-  // const body = JSON.stringify(payload, null, 2);
-
   const body = await req.text();
-
-  console.log(">>> Webhook payload:", body);
 
   const sivx = new Webhook(webhookSecret);
 
