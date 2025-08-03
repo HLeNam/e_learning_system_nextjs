@@ -40,7 +40,7 @@ const SidebarMenuItem = ({ href, icon, label }: TMenuItem) => {
         href={href}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={`group relative mb-1 flex items-center rounded-lg px-3 py-3 text-slate-700 transition-all ${isActive ? "bg-primary-600 !text-primary-50 svg-animate" : "hover:bg-primary-50 hover:text-primary-600 text-slate-700"} `}
+        className={`group relative mb-1 flex items-center rounded-lg px-3 py-3 text-slate-700 transition-all dark:text-slate-400 ${isActive ? "bg-primary-600 !text-primary-50 svg-animate" : "hover:bg-primary-50 hover:text-primary-600 dark:hover:text-primary-500 dark:hover:bg-primary-600/10 text-slate-700"} `}
       >
         <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center">
           {icon}

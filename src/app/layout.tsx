@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { inter } from "@/utils/fonts";
 
 import "./globals.css";
+import { ThemeProvider } from "@/components/common";
 
 export const metadata: Metadata = {
   title: "E Learning System",
@@ -17,8 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={`${inter.className} antialiased`}>{children}</body>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${inter.className} antialiased`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   );

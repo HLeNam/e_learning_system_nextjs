@@ -13,7 +13,7 @@ const SidebarRoot = ({ children }: SidebarRootProps) => {
 
   return (
     <aside
-      className={`flex h-full flex-col border-r border-slate-200 bg-white shadow-sm transition-all duration-300 ease-in-out ${
+      className={`dark:bg-sidebar dark:border-sidebar-border flex h-full flex-col border-r border-slate-200 bg-white shadow-sm transition-all duration-300 ease-in-out ${
         isExpanded ? "w-64" : "w-16"
       }`}
     >

@@ -1,7 +1,10 @@
+export { default as IconEye } from "./icon-eye";
 export { default as IconPlay } from "./icon-play";
+export { default as IconStar } from "./icon-star";
 export { default as IconUser } from "./icon-user";
 export { default as IconBolt } from "./icon-bolt";
 export { default as IconHome } from "./icon-home";
+export { default as IconClock } from "./icon-clock";
 export { default as IconStudy } from "./icon-study";
 export { default as IconUsers } from "./icon-users";
 export { default as IconOrder } from "./icon-order";

@@ -1,5 +1,18 @@
+import { CourseGrid } from "@/components/common";
+import { CourseItem } from "@/components/course";
+import { Heading } from "@/components/typography";
+
 const page = () => {
-  return <div>Khu vực học tập</div>;
+  return (
+    <>
+      <Heading>Khu vực học tập</Heading>
+      <CourseGrid>
+        <CourseItem />
+        <CourseItem />
+        <CourseItem />
+      </CourseGrid>
+    </>
+  );
 };
 
 export default page;
