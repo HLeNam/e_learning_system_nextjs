@@ -2,7 +2,7 @@ import { CourseGrid } from "@/components/common";
 import { CourseItem } from "@/components/course";
 import { Heading } from "@/components/typography";
 
-const page = () => {
+const page = async () => {
   return (
     <div>
       <Heading>Khám phá</Heading>

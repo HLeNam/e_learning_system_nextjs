@@ -4,4 +4,13 @@ type TMenuItem = {
   href: string;
 };
 
-export { TMenuItem };
+// User
+type TCreateParams = {
+  clerkId: string;
+  username: string;
+  email: string;
+  name?: string;
+  avatar?: string;
+};
+
+export { TMenuItem, TCreateParams };
