@@ -14,7 +14,7 @@ const Sidebar = () => {
     <SidebarProvider>
       <SidebarRoot>
         {/* Header */}
-        <div className="dark:border-sidebar-border flex items-center justify-between border-b border-slate-200 p-4">
+        <div className="dark:border-sidebar-border flex h-[73px] items-center justify-between border-b border-slate-200 p-4">
           <div className="flex min-w-0 items-center">
             {/* Logo */}
             <div className="bg-primary-600 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg">
